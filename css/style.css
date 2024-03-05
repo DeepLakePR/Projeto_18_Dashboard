@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
+    background: #FAF9FC;
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+/* Sidebar */
+div.sidebar{
+    width: 300px;
+    height: 100%;
+    background: #2D3035;
+    float: left;
+}
+
+div.sidebar-top{
+    background: #26282D;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+div.sidebar-top h3{
+    color: white;
+}
+
+nav.menu{
+    padding: 30px;
+}
+
+nav.menu ul{
+    list-style: none;
+}
+
+nav.menu ul li{
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+nav.menu ul li a{
+    width: 100%;
+    color: #acacac;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav.menu ul li i{
+    width: 10%;
+    margin-right: 5px;
+    text-align: center;
+}
+
+nav.menu ul li:hover a{
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+nav.menu ul li:hover i{
+    transition: 0.5s ease-in-out;
+    color: #6D3BB8;
+}
+
+/* Dashboard Contenct */
+div.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+div.main-content header{
+    height: 90px;
+    background: white;
+    padding: 20px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+header .menu-mobile{
+    float: left;
+    display: none;
+    z-index: 999;
+    position: relative;
+}
+
+header .menu-mobile h2{
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #A7A7A7;
+    cursor: pointer;
+}
+
+header .notification-alert{
+    margin-right: 25px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: #FBEDEF;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+header .notification-alert p{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: inline-block;
+    background: #ED7387;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+header .notification-alert i{
+    line-height: 30px;
+    font-size: 18px;
+    color: #ED7387;
+    font-weight: bold;
+}
+
+header .search-input{
+    float: right;
+}
+
+header .search-icon{
+    background: #D6D6D6;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+header .search-icon i{
+    position: relative;
+    top: 7px;
+}
+
+header .search-input form{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+header .search-input input{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+header .search-input input:focus{
+    outline: 0;
+}
+
+/* Dashboard Content */
+div.dashboard-content{
+    float: left;
+    width: 75%;
+    height: calc(100% - 90px);
+    padding: 30px;
+    overflow-y: auto;
+}
+
+div.dashboard-content .panel{
+    width: 100%;
+    float: left;
+    border: 2px solid #EBEBEB;
+    background: white;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.dashboard-content .panel h2{
+    color: #7F7F7F;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.dashboard-content .panel p{
+    color: #B2B2B2;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* Last Updates */
+div.last-updates{
+    width: 25%;
+    height: calc(100% - 90px);
+    background: #EAEBEB;
+    padding: 20px 25px;
+    float: left;
+    overflow-y: auto;
+}
+
+.last-updates .last-updates-top h2{
+    color: #7F7F7F;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}   
+
+.last-updates .last-updates_log{
+    padding: 15px 10px;
+    border-left: 1px solid #bbbbbb;
+    position: relative;
+}
+
+.last-updates_log .log-circle{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #E9EBEB;
+    border-radius: 50%;
+    border: 1px solid #bbbbbb;
+}
+
+.last-updates_log h2{
+    color: #9e9e9e;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.last-updates_log p{
+    color: #747474;
+    font-size: 15px;
+}
+
+/******************************/
+/* Responsive */
+@media screen and (max-width: 768px){
+
+    div.sidebar{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    div.menu-mobile{
+        display: block;
+    }
+
+    div.main-content{
+        width: 100%;
+    }
+
+    div.dashboard-content{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .dashboard-content .panel{
+        width: 100% !important;
+    }
+
+    .last-updates{
+        display: none;
+    }
+
+}
